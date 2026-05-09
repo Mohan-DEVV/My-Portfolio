@@ -22,6 +22,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { RESUME_DATA } from './data';
+import Chatbot from './Chatbot';
 
 // --- Components ---
 
@@ -508,6 +509,9 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot Widget */}
+      <Chatbot />
     </div>
   );
 }
