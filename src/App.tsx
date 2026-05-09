@@ -182,9 +182,11 @@ const ExperienceItem = ({ exp, index }: ExperienceItemProps) => (
     className="relative pl-8 md:pl-12 pb-12 last:pb-0"
   >
     <div className="absolute left-0 top-0 bottom-0 w-px bg-white/10">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-azure-blue border-4 border-deep-bg shadow-[0_0_15px_rgba(0,120,212,0.5)]" />
+      <motion.div 
+        whileHover={{ scale: 1.5 }}
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-azure-blue border-4 border-deep-bg shadow-[0_0_15px_rgba(0,120,212,0.5)] cursor-pointer z-10 transition-shadow hover:shadow-[0_0_25px_rgba(0,120,212,0.8)]" 
+      />
     </div>
-    
     <div className="glass-panel p-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
         <div>
@@ -217,9 +219,9 @@ const ExperienceItem = ({ exp, index }: ExperienceItemProps) => (
 
 const FloatingBackground = () => (
   <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-azure-blue/5 blur-[120px]" />
-    <div className="absolute bottom-[10%] right-[-10%] w-[35%] h-[35%] rounded-full bg-azure-blue/10 blur-[100px]" />
-    <div className="absolute inset-0 bg-grid opacity-20" />
+    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-azure-blue/5 blur-[140px]" />
+    <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] rounded-full bg-azure-blue/5 blur-[120px]" />
+    <div className="absolute inset-0 bg-grid opacity-[0.15]" />
   </div>
 );
 
